@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Compra Exitosa! - Gracias por tu Confianza</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'TU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase', {value: 6.97, currency: 'USD'});
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #F0FFF4 0%, #F0F8FF 100%);
+            color: #2D3748;
+            line-height: 1.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            text-align: center;
+            background: #ffffff;
+            padding: 70px 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 60px rgba(56, 161, 105, 0.15);
+            border: 3px solid #9AE6B4;
+        }
+        
+        .success-icon {
+            font-size: 6em;
+            margin-bottom: 30px;
+            animation: scale-in 0.6s ease;
+        }
+        
+        @keyframes scale-in {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .headline {
+            font-size: 3em;
+            background: linear-gradient(135deg, #38A169 0%, #2F855A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 22px;
+            line-height: 1.2;
+            font-weight: 900;
+        }
+        
+        .subheadline {
+            font-size: 1.4em;
+            color: #4A5568;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #F0FFF4 0%, #E6FFFA 100%);
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 6px solid #48BB78;
+            margin: 35px 0;
+            text-align: left;
+        }
+        
+        .info-box h3 {
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 800;
+        }
+        
+        .info-box p {
+            color: #2D3748;
+            font-size: 1.15em;
+            line-height: 1.9;
+            margin: 15px 0;
+        }
+        
+        .info-box strong {
+            color: #667EEA;
+            font-weight: 700;
+        }
+        
+        .email-highlight {
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+            color: #fff;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            margin: 25px 0;
+            font-size: 1.15em;
+        }
+        
+        .timeline {
+            background: #F7FAFC;
+            padding: 35px;
+            border-radius: 14px;
+            margin: 35px 0;
+        }
+        
+        .timeline h4 {
+            color: #2D3748;
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            font-weight: 800;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 22px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        
+        .timeline-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            min-width: 60px;
+        }
+        
+        .timeline-text {
+            color: #4A5568;
+            font-size: 1.05em;
+        }
+        
+        .timeline-text strong {
+            color: #2D3748;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .support-box {
+            background: linear-gradient(135deg, #EBF8FF 0%, #E6FFFA 100%);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 2px solid #90CDF4;
+        }
+        
+        .support-box h3 {
+            color: #2C5282;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 800;
+        }
+        
+        .support-box p {
+            color: #2D3748;
+            font-size: 1.1em;
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+        
+        .support-email {
+            background: linear-gradient(135deg, #4299E1 0%, #3182CE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            font-size: 1.3em;
+        }
+        
+        .final-message {
+            padding: 35px;
+            background: linear-gradient(135deg, #FAF5FF 0%, #F0FFF4 100%);
+            border-radius: 14px;
+            margin-top: 40px;
+            border: 2px solid #D6BCFA;
+        }
+        
+        .final-message p {
+            color: #2D3748;
+            font-size: 1.15em;
+            line-height: 1.9;
+        }
+        
+        .final-message .highlight {
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            font-size: 1.25em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 50px 30px;
+            }
+            
+            .headline {
+                font-size: 2.2em;
+            }
+            
+            .success-icon {
+                font-size: 4.5em;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+        
+        <h1 class="headline">¡COMPRA EXITOSA!</h1>
+        <p class="subheadline">Tu pedido ha sido confirmado y procesado correctamente. Bienvenido a la comunidad.</p>
+        
+        <div class="info-box">
+            <h3>📧 Revisa Tu Email</h3>
+            <p>Hemos enviado toda la información de acceso a la dirección de correo electrónico que registraste durante la compra.</p>
+            <div class="email-highlight">
+                ⚠️ IMPORTANTE: Revisa también tu carpeta de SPAM o Promociones
+            </div>
+            <p><strong>Tiempo de entrega:</strong> Recibirás el acceso completo en las próximas <strong>48 horas</strong>.</p>
+            <p>El email incluirá todos los enlaces de descarga de tu material y bonos.</p>
+        </div>
+        
+        <div class="timeline">
+            <h4>🗓️ ¿Qué Sigue Ahora?</h4>
+            
+            <div class="timeline-item">
+                <span class="timeline-icon">📨</span>
+                <div class="timeline-text">
+                    <strong>Paso 1:</strong> Revisa tu email de confirmación (llegará en minutos)
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-icon">📥</span>
+                <div class="timeline-text">
+                    <strong>Paso 2:</strong> Descarga todo el material y bonos (disponible en 48 horas)
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-icon">🎨</span>
+                <div class="timeline-text">
+                    <strong>Paso 3:</strong> ¡Comienza tu camino como experto en resina epóxica!
+                </div>
+            </div>
+        </div>
+        
+        <div class="support-box">
+            <h3>💬 ¿Necesitas Ayuda?</h3>
+            <p>Si tienes alguna pregunta o no recibes tu acceso en 48 horas, no dudes en contactarnos:</p>
+            <p class="support-email">soportecompra@outlook.com</p>
+            <p style="font-size: 1em; margin-top: 20px; color: #4A5568;">Respondemos todos los mensajes en menos de 24 horas hábiles.</p>
+        </div>
+        
+        <div class="final-message">
+            <p style="margin-bottom: 20px;">
+                <span class="highlight">¡Gracias por confiar en nosotros!</span>
+            </p>
+            <p>
+                Estamos emocionados de acompañarte en tu camino como experto en resina epóxica. 
+                Miles de personas ya están creando negocios rentables con este sistema, 
+                y ahora tú eres parte de esta comunidad.
+            </p>
+            <p style="margin-top: 20px; font-weight: 600;">
+                Nos vemos dentro. ¡Es hora de crear! 🎨
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -648,7 +648,7 @@
     
     <!-- Notificación de compra -->
     <div class="purchase-notification" id="purchaseNotif">
-        <strong id="buyerName">Laura M.</strong> de <span id="buyerCity">Medellín</span> acaba de comprar
+        <strong id="buyerName">Laura M.</strong> de <span id="buyerCity">Medellín</span>, <span id="buyerCountry">Colombia</span> acaba de comprar
         <small>Hace 3 minutos</small>
     </div>
     
@@ -660,8 +660,10 @@
             
             <!-- Video de introducción 3 minutos -->
             <div class="video-container">
-                <div style="position: relative; width: 100%; max-width: 360px; margin: 0 auto; aspect-ratio: 9/16; overflow: hidden; border-radius: 15px; box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);">
-                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/1189983988?h=a6617ecabe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+                <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 60px rgba(102, 126, 234, 0.35);">
+                    <div style="position: relative; padding-bottom: 75%; height: 0;">
+                        <iframe title="vimeo-player" src="https://player.vimeo.com/video/1189983988?h=a6617ecabe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
             
@@ -953,16 +955,28 @@
         // Notificaciones de compra
         const nombres = ['Carolina', 'María José', 'Ana Paula', 'Valentina', 'Sofía', 'Camila', 'Miguel', 'Roberto'];
         const apellidos = ['García', 'Rodríguez', 'Martínez', 'López', 'González', 'Pérez', 'Torres', 'Ramírez'];
-        const ciudades = ['Bogotá', 'Medellín', 'Cali', 'Barranquilla', 'CDMX', 'Lima', 'Santiago', 'Buenos Aires'];
+        const ubicaciones = [
+            {ciudad: 'Bogotá', pais: 'Colombia'},
+            {ciudad: 'Medellín', pais: 'Colombia'},
+            {ciudad: 'Cali', pais: 'Colombia'},
+            {ciudad: 'CDMX', pais: 'México'},
+            {ciudad: 'Guadalajara', pais: 'México'},
+            {ciudad: 'Lima', pais: 'Perú'},
+            {ciudad: 'Santiago', pais: 'Chile'},
+            {ciudad: 'Buenos Aires', pais: 'Argentina'},
+            {ciudad: 'Quito', pais: 'Ecuador'},
+            {ciudad: 'Guayaquil', pais: 'Ecuador'}
+        ];
         
         function showPurchaseNotification() {
             const notif = document.getElementById('purchaseNotif');
             const nombre = nombres[Math.floor(Math.random() * nombres.length)];
             const apellido = apellidos[Math.floor(Math.random() * apellidos.length)];
-            const ciudad = ciudades[Math.floor(Math.random() * ciudades.length)];
+            const ubicacion = ubicaciones[Math.floor(Math.random() * ubicaciones.length)];
             
             document.getElementById('buyerName').textContent = `${nombre} ${apellido.charAt(0)}.`;
-            document.getElementById('buyerCity').textContent = ciudad;
+            document.getElementById('buyerCity').textContent = ubicacion.ciudad;
+            document.getElementById('buyerCountry').textContent = ubicacion.pais;
             
             notif.classList.add('show');
             

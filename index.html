@@ -204,11 +204,21 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            text-align: center;
         }
         
         .benefit-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .benefit-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+            border-radius: 10px;
         }
         
         .benefit-card h3 {
@@ -358,10 +368,6 @@
         <p style="margin-bottom: 10px; font-size: 1.1rem;">⏰ Esta oferta termina en:</p>
         <div class="countdown-timer">
             <div class="time-unit">
-                <span class="time-number" id="days">0</span>
-                <span class="time-label">Días</span>
-            </div>
-            <div class="time-unit">
                 <span class="time-number" id="hours">00</span>
                 <span class="time-label">Horas</span>
             </div>
@@ -417,49 +423,65 @@
     <h2>🎁 8 Bonos Exclusivos Completamente Gratis</h2>
     
     <div class="benefits-grid">
+        <!-- BONO 1 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono1.png" alt="Directorio Proveedores">
             <h3>🌍 Directorio de Proveedores Internacionales</h3>
             <p>Contactos verificados de proveedores confiables en toda Latinoamérica. Ahorra tiempo y dinero consiguiendo los mejores precios.</p>
             <span class="benefit-price">Valor: $25 USD - GRATIS</span>
         </div>
         
+        <!-- BONO 2 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono2.png" alt="Moldes Artesanales">
             <h3>🔧 Guía Completa: Moldes Artesanales</h3>
             <p>Aprende a crear tus propios moldes personalizados y ahorra cientos de dólares en moldes comerciales.</p>
             <span class="benefit-price">Valor: $21 USD - GRATIS</span>
         </div>
         
+        <!-- BONO 3 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono3.png" alt="Lámparas Decorativas">
             <h3>💡 Manual: Lámparas Decorativas</h3>
             <p>Diseños exclusivos paso a paso para crear lámparas decorativas únicas - uno de los productos más vendidos y rentables.</p>
             <span class="benefit-price">Valor: $21 USD - GRATIS</span>
         </div>
         
+        <!-- BONO 4 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono4.png" alt="Checklist Profesional">
             <h3>📋 Checklist del Aplicador Profesional</h3>
             <p>Lista de verificación profesional para cada proyecto. Nunca olvides un paso crítico y obtén resultados perfectos siempre.</p>
             <span class="benefit-price">Valor: $18 USD - GRATIS</span>
         </div>
         
+        <!-- BONO 5 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono5.png" alt="Mentalidad Emprendedora">
             <h3>📚 Mentalidad Emprendedora</h3>
             <p>E-book con mentalidad ganadora y estrategias comprobadas para construir tu negocio exitoso desde cero.</p>
             <span class="benefit-price">Valor: $18 USD - GRATIS</span>
         </div>
         
+        <!-- BONO 6 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono6.png" alt="Calculadora Precios">
             <h3>💰 Calculadora de Precios Automática</h3>
             <p>Calcula automáticamente precios rentables considerando materiales, tiempo y ganancia deseada. Maximiza tus ingresos.</p>
             <span class="benefit-price">Valor: $18 USD - GRATIS</span>
         </div>
         
+        <!-- BONO 7 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono7.png" alt="Comunidad Telegram">
             <h3>👥 Comunidad Privada Telegram</h3>
             <p>Acceso exclusivo a nuestro grupo privado de emprendedores. Comparte ideas, proyectos y oportunidades con personas como tú.</p>
             <span class="benefit-price">Valor: $18 USD - GRATIS</span>
         </div>
         
+        <!-- BONO 8 -->
         <div class="benefit-card">
+            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono8.png" alt="Certificado Oficial">
             <h3>🏆 Certificado Oficial</h3>
             <p>Certifica oficialmente tus conocimientos y aumenta tu credibilidad profesional ante tus clientes.</p>
             <span class="benefit-price">Valor: $18 USD - GRATIS</span>
@@ -646,23 +668,20 @@ function updateCountdown() {
     const midnight = new Date();
     midnight.setHours(24, 0, 0, 0);
     
-    // Agregar 72 horas desde medianoche
-    const deadline = new Date(midnight.getTime() + (72 * 60 * 60 * 1000));
+    // Agregar 24 horas desde medianoche
+    const deadline = new Date(midnight.getTime() + (24 * 60 * 60 * 1000));
     
     const distance = deadline.getTime() - now.getTime();
     
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-    document.getElementById('days').textContent = days;
     document.getElementById('hours').textContent = String(hours).padStart(2, '0');
     document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
     document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
     
     if (distance < 0) {
-        document.getElementById('days').textContent = '0';
         document.getElementById('hours').textContent = '00';
         document.getElementById('minutes').textContent = '00';
         document.getElementById('seconds').textContent = '00';

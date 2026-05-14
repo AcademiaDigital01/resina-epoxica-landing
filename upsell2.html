@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💎 ÚLTIMA OPORTUNIDAD - 100 Diseños</title>
+    <title>Última Oportunidad - 100 Diseños</title>
+    
+    <!-- Facebook Pixel -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,500 +18,226 @@
     fbq('init', '1244334197874486');
     fbq('track', 'PageView');
     </script>
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #1a1a2e;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            min-height: 100vh;
-        }
-        
-        .timer-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: linear-gradient(135deg, #FF0000, #FF6B35);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            box-shadow: 0 5px 30px rgba(255,0,0,0.5);
-        }
-        
-        .timer-content {
-            text-align: center;
-        }
-        
-        .timer-label {
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-        
-        .timer-display {
-            font-size: 2.5rem;
-            font-weight: bold;
-            font-family: 'Courier New', monospace;
-            letter-spacing: 3px;
+            color: #2d3748;
+            background: #f7fafc;
         }
         
         .container {
-            max-width: 1000px;
-            margin: 100px auto 20px;
-            padding: 20px;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 20px;
         }
         
-        .header {
-            background: linear-gradient(135deg, #6633FF, #CC33FF);
-            color: white;
-            padding: 50px 30px;
-            border-radius: 20px;
+        h1 {
+            font-size: 38px;
             text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 60px rgba(102,51,255,0.4);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::after {
-            content: '💎';
-            position: absolute;
-            font-size: 15rem;
-            opacity: 0.1;
-            right: -50px;
-            top: -50px;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .urgency-strip {
-            background: #FFD700;
-            color: #1a1a2e;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            animation: blink 2s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-        
-        .content {
-            background: white;
-            padding: 50px 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            margin-bottom: 30px;
-        }
-        
-        .content h2 {
-            color: #6633FF;
-            font-size: 2.5rem;
             margin-bottom: 20px;
-            text-align: center;
+            color: #2d3748;
+            line-height: 1.2;
         }
         
-        .subtitle {
+        h2 {
+            font-size: 26px;
             text-align: center;
-            font-size: 1.4rem;
-            color: #666;
-            margin-bottom: 40px;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .intro-text {
+            font-size: 19px;
+            text-align: center;
+            margin: 30px 0;
+            color: #4a5568;
             line-height: 1.8;
         }
         
-        .stat-boxes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+        .offer-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin: 40px 0;
         }
         
-        .stat-box {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
+        .offer-box h3 {
+            font-size: 30px;
+            color: #f39c12;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(102,51,255,0.3);
+            margin-bottom: 25px;
         }
         
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-top: 10px;
-        }
-        
-        .design-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        
-        .design-card {
-            background: linear-gradient(to bottom, #f8f9fa, white);
-            padding: 25px;
-            border-radius: 15px;
-            border: 2px solid #e9ecef;
-            transition: all 0.3s;
-        }
-        
-        .design-card:hover {
-            transform: translateY(-5px);
-            border-color: #6633FF;
-            box-shadow: 0 15px 40px rgba(102,51,255,0.2);
-        }
-        
-        .design-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        
-        .design-card h3 {
-            color: #1a1a2e;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .design-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        .testimonial-box {
-            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-            border-left: 5px solid #00acc1;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-        }
-        
-        .testimonial-box p {
-            font-style: italic;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #00838f;
-        }
-        
-        .price-explosion {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            padding: 50px 30px;
-            border-radius: 20px;
+        .offer-box > p:first-of-type {
             text-align: center;
-            margin: 40px 0;
-            box-shadow: 0 20px 60px rgba(255,215,0,0.5);
-            position: relative;
+            font-size: 17px;
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 25px;
         }
         
-        .sparkle {
-            position: absolute;
-            font-size: 2rem;
-            animation: sparkle 1.5s infinite;
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-        
-        .sparkle:nth-child(1) { top: 10px; left: 10%; animation-delay: 0s; }
-        .sparkle:nth-child(2) { top: 20px; right: 15%; animation-delay: 0.5s; }
-        .sparkle:nth-child(3) { bottom: 30px; left: 20%; animation-delay: 1s; }
-        
-        .price-old {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1.5rem;
-        }
-        
-        .price-new {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #6633FF;
+        .offer-box ul {
+            list-style: none;
             margin: 25px 0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
         }
         
-        .savings-badge {
-            background: #FF0000;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
+        .offer-box li {
+            padding: 15px;
+            margin: 12px 0;
+            background: #f7fafc;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+            font-size: 17px;
+        }
+        
+        .highlight-benefit {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .price-box {
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            border: 3px solid #f39c12;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .price-box .tachado {
+            font-size: 28px;
+            text-decoration: line-through;
+            color: #e74c3c;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .price-box .final-price {
+            font-size: 52px;
+            color: #27ae60;
+            font-weight: 800;
+            display: block;
         }
         
         .cta-button {
             display: block;
-            background: linear-gradient(135deg, #6633FF, #CC33FF);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
             color: white;
-            padding: 30px 60px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-align: center;
+            padding: 22px 45px;
+            font-size: 22px;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 60px;
-            margin: 40px auto;
-            max-width: 700px;
-            box-shadow: 0 20px 60px rgba(102,51,255,0.5);
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
             transition: all 0.3s;
-            animation: pulse-button 2s infinite;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        @keyframes pulse-button {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
-        
-        .cta-button::before {
-            content: '✨';
-            position: absolute;
-            left: 30px;
-            animation: bounce 1s infinite;
-        }
-        
-        .cta-button::after {
-            content: '✨';
-            position: absolute;
-            right: 30px;
-            animation: bounce 1s infinite 0.5s;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            margin: 25px auto;
+            text-align: center;
+            max-width: 550px;
         }
         
         .cta-button:hover {
-            transform: scale(1.05) translateY(-5px);
-            box-shadow: 0 30px 80px rgba(102,51,255,0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(243, 156, 18, 0.6);
         }
         
-        .guarantee {
-            background: linear-gradient(135deg, #a8edea, #fed6e3);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .decline {
+        .btn-no {
             display: block;
             text-align: center;
-            color: #999;
-            margin-top: 30px;
-            text-decoration: underline;
-            font-size: 0.9rem;
+            color: #718096;
+            text-decoration: none;
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        
+        .btn-no:hover {
+            color: #2d3748;
         }
         
         @media (max-width: 768px) {
-            .timer-display {
-                font-size: 2rem;
+            h1 {
+                font-size: 26px;
             }
-            .header h1 {
-                font-size: 2rem;
+            
+            h2 {
+                font-size: 22px;
             }
-            .price-new {
-                font-size: 3rem;
+            
+            .offer-box {
+                padding: 30px 20px;
             }
+            
             .cta-button {
-                font-size: 1.4rem;
-                padding: 20px 40px;
+                padding: 18px 30px;
+                font-size: 19px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="timer-bar">
-        <div class="timer-content">
-            <div class="timer-label">⚠️ ESTA PÁGINA SE CIERRA EN:</div>
-            <div class="timer-display" id="timer">00:60</div>
-        </div>
-    </div>
-
     <div class="container">
-        <div class="header">
-            <h1>💎 Una Última Cosa...</h1>
-            <p style="font-size: 1.4rem; margin-top: 15px;">
-                El 73% de los estudiantes que agregaron esto<br>
-                <strong>multiplicaron sus ventas x3 en el primer mes</strong>
-            </p>
-        </div>
-
-        <div class="urgency-strip">
-            🔥 Esta página desaparece en 60 segundos - DECIDE AHORA
-        </div>
-
-        <div class="content">
-            <h2>Colección Premium de 100 Diseños</h2>
-            
-            <p class="subtitle">
-                Tienes las técnicas...<br>
-                <strong style="color: #6633FF; font-size: 1.6rem;">¿Pero QUÉ diseños crear para vender MÁS y RÁPIDO?</strong>
-            </p>
-
-            <div class="stat-boxes">
-                <div class="stat-box">
-                    <span class="stat-number">100</span>
-                    <span class="stat-label">Diseños Probados</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">$47</span>
-                    <span class="stat-label">Valor Normal</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">$17</span>
-                    <span class="stat-label">Solo Hoy</span>
-                </div>
-            </div>
-
-            <div class="testimonial-box">
-                <p>"Con esta colección nunca más me quedé sin ideas. Mis clientes me piden diseños específicos y siempre encuentro uno perfecto aquí. Mis ventas subieron de $400 a $1,200 en un mes."</p>
-                <div class="testimonial-author">— Laura M., Bogotá 🇨🇴</div>
-            </div>
-
-            <h3 style="text-align: center; color: #1a1a2e; font-size: 2rem; margin: 50px 0 30px;">
-                🎨 Lo Que Incluye:
-            </h3>
-
-            <div class="design-grid">
-                <div class="design-card">
-                    <div class="design-icon">🌊</div>
-                    <h3>30 Diseños Nivel Principiante</h3>
-                    <p>Simples pero hermosos. Perfectos para empezar a vender desde día 1</p>
-                </div>
-
-                <div class="design-card">
-                    <div class="design-icon">💎</div>
-                    <h3>40 Diseños Nivel Intermedio</h3>
-                    <p>Diseños elaborados que te diferencian de la competencia</p>
-                </div>
-
-                <div class="design-card">
-                    <div class="design-icon">🏆</div>
-                    <h3>30 Diseños Nivel Avanzado</h3>
-                    <p>Espectaculares. Generan "wow" y se venden a precios premium</p>
-                </div>
-
-                <div class="design-card">
-                    <div class="design-icon">📋</div>
-                    <h3>Instrucciones Paso a Paso</h3>
-                    <p>Cada diseño con lista de materiales y técnicas específicas</p>
-                </div>
-
-                <div class="design-card">
-                    <div class="design-icon">💰</div>
-                    <h3>Estimados de Costo/Venta</h3>
-                    <p>Sabrás exactamente cuánto invertir y a qué precio vender</p>
-                </div>
-
-                <div class="design-card">
-                    <div class="design-icon">📈</div>
-                    <h3>Diseños Trending</h3>
-                    <p>Los que la gente busca AHORA en redes sociales</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="price-explosion">
-            <span class="sparkle">✨</span>
-            <span class="sparkle">✨</span>
-            <span class="sparkle">✨</span>
-            
-            <p style="font-size: 1.2rem; margin-bottom: 15px; color: #1a1a2e;">Valor Normal:</p>
-            <div class="price-old">$47 USD</div>
-            
-            <p style="font-size: 1.5rem; font-weight: bold; color: #1a1a2e; margin: 20px 0;">
-                ⚡ SOLO EN ESTA PÁGINA ⚡
-            </p>
-            
-            <div class="price-new">$17</div>
-            
-            <div class="savings-badge">
-                💸 AHORRAS $30 USD
-            </div>
-            
-            <p style="margin-top: 25px; font-size: 1.1rem; color: #1a1a2e;">
-                Nunca más te preguntarás "¿qué diseño hago hoy?"
-            </p>
-        </div>
-
-        <a href="https://pay.hotmart.com/H105808531B?checkoutMode=10" 
-           class="cta-button"
-           onclick="fbq('track', 'InitiateCheckout');">
-            SÍ, AGREGAR 100 DISEÑOS ($17)
-        </a>
-
-        <div class="guarantee">
-            <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: #1a1a2e;">🛡️ Garantía Total de 7 Días</h3>
-            <p style="font-size: 1.1rem; color: #666;">
-                Cubierto por la misma garantía del producto principal.<br>
-                <strong>Si no amas los diseños, te devolvemos todo.</strong>
-            </p>
-        </div>
-
-        <a href="https://academiadigital01.github.io/resina-epoxica-landing/thankyou.html" class="decline">
-            No gracias, prefiero continuar sin los diseños →
-        </a>
-    </div>
-
-    <script>
-    let timeLeft = 60;
-    const timerDisplay = document.getElementById('timer');
-    
-    function updateTimer() {
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        <h1>🎨 ¿Te Gusta Crear Pero Odias Inventar Diseños?</h1>
         
-        if (timeLeft <= 0) {
-            window.location.href = 'https://academiadigital01.github.io/resina-epoxica-landing/thankyou.html';
-        } else {
-            timeLeft--;
-        }
-    }
-    
-    updateTimer();
-    setInterval(updateTimer, 1000);
-    </script>
+        <h2>Agrega 100 Diseños Premium Probados en Mercado</h2>
+        
+        <p class="intro-text">
+            Ya tienes el curso base con técnicas...<br>
+            Pero seamos honestos: ¿Cuántas horas quieres gastar buscando "qué hacer"?
+        </p>
+        
+        <div class="offer-box">
+            <h3>📦 COLECCIÓN PREMIUM: 100 Diseños Más Vendidos</h3>
+            
+            <p>Esto NO está incluido en el curso base.</p>
+            
+            <p style="margin-top: 20px; font-size: 18px; text-align: left;">Recibes:</p>
+            <ul>
+                <li>✅ 100 fotos HD de diseños (tú los replicas paso a paso)</li>
+                <li>✅ Lista de materiales específicos para cada diseño</li>
+                <li>✅ Rango de precio venta sugerido según mercado LATAM</li>
+                <li>✅ Nivel de dificultad marcado (principiante/intermedio/avanzado)</li>
+                <li>✅ Tiempo estimado de creación para cada pieza</li>
+            </ul>
+            
+            <div class="highlight-benefit">
+                → Ahorra 40+ horas de buscar inspiración en Pinterest<br>
+                → Empieza a vender desde el primer día con diseños probados
+            </div>
+            
+            <div class="price-box">
+                <span class="tachado">$67 USD</span>
+                <span class="final-price">Hoy: $17 USD</span>
+            </div>
+            
+            <p style="text-align: center; font-size: 16px; color: #718096; margin: 15px 0;">
+                Solo disponible ahora.<br>
+                No vuelves a ver esta oferta después.
+            </p>
+            
+            <a href="https://pay.hotmart.com/H105808531B" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 17, currency: 'USD'});">
+                SÍ, QUIERO LOS 100 DISEÑOS — $17
+            </a>
+            
+            <a href="https://pay.hotmart.com/V105808588J" class="btn-no">
+                No, prefiero buscar diseños yo mismo →
+            </a>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Todo Listo! - Acceso Confirmado</title>
+    
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1244334197874486');
+    fbq('track', 'PageView');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 650px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #48bb78;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.6s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0) rotate(-180deg); }
+            to { transform: scale(1) rotate(0deg); }
+        }
+        
+        .success-icon svg {
+            width: 70px;
+            height: 70px;
+            stroke: white;
+            stroke-width: 3;
+            fill: none;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: drawCheck 0.6s 0.3s ease-out forwards;
+        }
+        
+        @keyframes drawCheck {
+            to { stroke-dashoffset: 0; }
+        }
+        
+        h1 {
+            font-size: 38px;
+            color: #2d3748;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            font-size: 19px;
+            color: #4a5568;
+            margin-bottom: 40px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .next-steps {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .next-steps h2 {
+            font-size: 24px;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        
+        .next-steps ol {
+            padding-left: 25px;
+        }
+        
+        .next-steps li {
+            font-size: 17px;
+            color: #2d3748;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+        
+        .next-steps strong {
+            color: #48bb78;
+        }
+        
+        .email-box {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .email-box p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #2d3748;
+        }
+        
+        .support-box {
+            background: #e6f7ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .support-box p {
+            font-size: 16px;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        
+        .support-box strong {
+            color: #3182ce;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .next-steps ol {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">
+            <svg viewBox="0 0 52 52">
+                <path d="M14 27l7 7 16-16"/>
+            </svg>
+        </div>
+        
+        <h1>✅ ¡Todo Listo! Nos Vemos Adentro</h1>
+        
+        <p class="subtitle">
+            Tu acceso completo está confirmado y en camino a tu correo.
+        </p>
+        
+        <div class="email-box">
+            <p>📧 <strong>Revisa tu email en los próximos 5 minutos</strong></p>
+            <p>Si no lo ves, revisa tu carpeta de Spam o Promociones</p>
+        </div>
+        
+        <div class="next-steps">
+            <h2>📍 Tu Primer Paso (Haz Esto Hoy):</h2>
+            <ol>
+                <li><strong>Entra al curso</strong> desde el link del email</li>
+                <li><strong>Ve directo al Módulo 1</strong> y descarga la guía de inicio rápido</li>
+                <li><strong>Descarga la lista de materiales</strong> que está en el módulo 1</li>
+                <li><strong>Únete al grupo de Telegram</strong> (link dentro de la plataforma)</li>
+            </ol>
+        </div>
+        
+        <div style="background: #fef5e7; padding: 25px; border-radius: 12px; margin: 30px 0;">
+            <p style="font-size: 18px; color: #2d3748; text-align: center; line-height: 1.7;">
+                <strong style="color: #f39c12; font-size: 20px;">💡 TIP IMPORTANTE:</strong><br>
+                Los estudiantes que empiezan <strong>el mismo día</strong> tienen 3x más probabilidad<br>
+                de terminar el curso y hacer su primera venta.
+            </p>
+            <p style="text-align: center; margin-top: 15px; font-size: 17px; color: #2d3748;">
+                No lo dejes para mañana. Entra hoy y descarga la guía de inicio.
+            </p>
+        </div>
+        
+        <div class="support-box">
+            <p>
+                <strong>¿Problemas con el acceso?</strong><br>
+                Email: <a href="mailto:soportecompra@outlook.com" style="color: #3182ce;">soportecompra@outlook.com</a><br>
+                Respondemos en menos de 2 horas.
+            </p>
+        </div>
+        
+        <p style="text-align: center; color: #718096; font-size: 15px; margin-top: 30px;">
+            Gracias por confiar en nosotros.<br>
+            Nos vemos dentro del curso 🚀
+        </p>
+    </div>
+</body>
+</html>

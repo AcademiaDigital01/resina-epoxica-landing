@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domina la Resina Epóxica - Experto en 7 Días</title>
+    <title>Domina la Resina Epóxica - $20 → $150 Tu Primera Venta</title>
+    <meta name="description" content="Invierte $20 en materiales, vende a $150, gana $130. El curso cuesta $6.97. Tu primera venta lo paga 18 veces. Incluye calculadora automática.">
     
-    <!-- Facebook Pixel Code -->
+    <!-- Facebook Pixel -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,21 +19,9 @@
     fbq('init', '1244334197874486');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1244334197874486&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1244334197874486&ev=PageView&noscript=1"/></noscript>
     
     <style>
-        :root {
-            --primary: #FF6B35;
-            --secondary: #004E89;
-            --accent: #F7C548;
-            --dark: #1A1A2E;
-            --light: #F8F9FA;
-            --success: #28A745;
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -40,658 +29,1041 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background: var(--light);
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Urgencia Dual Bar */
+        .urgency-bar-dual {
+            background: linear-gradient(90deg, #f56565 0%, #ed8936 100%);
             color: white;
+            text-align: center;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.95; }
+        }
+        
+        .urgency-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        #countdown {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .social-count {
+            animation: countUp 0.5s ease-out;
+        }
+        
+        @keyframes countUp {
+            from { transform: scale(1.2); }
+            to { transform: scale(1); }
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: white;
             padding: 60px 20px;
             text-align: center;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 800;
+            font-size: 42px;
             line-height: 1.2;
+            margin-bottom: 20px;
+            color: #2d3748;
+            font-weight: 800;
         }
         
-        .hero .subheadline {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-        
-        .countdown {
-            background: rgba(255,255,255,0.2);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
+        .math-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 56px;
+            display: block;
             margin: 20px 0;
-            backdrop-filter: blur(10px);
+            animation: shimmer 3s infinite;
         }
         
-        .countdown-timer {
+        @keyframes shimmer {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .hero h2 {
+            font-size: 24px;
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        .subheadline {
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 30px;
             display: flex;
-            gap: 20px;
             justify-content: center;
+            align-items: center;
+            gap: 10px;
             flex-wrap: wrap;
         }
         
-        .time-unit {
-            text-align: center;
-        }
-        
-        .time-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-            line-height: 1;
-        }
-        
-        .time-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-top: 5px;
-        }
-        
-        .cta-button {
-            background: var(--accent);
-            color: var(--dark);
-            padding: 20px 50px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            margin: 20px 0;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-        }
-        
-        .social-proof {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            margin-top: 30px;
-            display: inline-block;
-            color: var(--dark);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-        
-        .section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-alt {
-            background: white;
-        }
-        
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: var(--dark);
-        }
-        
         .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 12px;
             overflow: hidden;
-            max-width: 900px;
-            margin: 30px auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
         }
         
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            border-radius: 15px;
+            height: 450px;
+            border: none;
         }
         
-        .price-box {
-            text-align: center;
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #f56565 0%, #ed8936 100%);
+            color: white;
+            padding: 20px 50px;
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(245, 101, 101, 0.4);
+            transition: all 0.3s;
             margin: 30px 0;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 101, 101, 0.6);
+        }
+        
+        .cta-subtext {
+            font-size: 14px;
+            color: #718096;
+            margin-top: 15px;
+        }
+        
+        /* Price Box */
+        .price-box {
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            border: 3px solid #f39c12;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 500px;
+            text-align: center;
         }
         
         .price-old {
+            font-size: 24px;
             text-decoration: line-through;
-            opacity: 0.7;
-            font-size: 1.2rem;
+            color: #e74c3c;
+            display: block;
         }
         
-        .price-discount {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--accent);
+        .discount-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            display: inline-block;
             margin: 10px 0;
+            font-size: 18px;
         }
         
         .price-new {
-            font-size: 3.5rem;
-            font-weight: 900;
+            font-size: 56px;
+            color: #27ae60;
+            font-weight: 800;
+            display: block;
             margin: 15px 0;
         }
         
-        .benefits-grid {
+        .value-bonos {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .comparison-section h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .fail-column {
+            background: #fff5f5;
+            border: 3px solid #fc8181;
+            border-radius: 12px;
+            padding: 30px;
+        }
+        
+        .fail-column h3 {
+            color: #c53030;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .win-column {
+            background: #f0fff4;
+            border: 3px solid #68d391;
+            border-radius: 12px;
+            padding: 30px;
+        }
+        
+        .win-column h3 {
+            color: #22543d;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-grid ul {
+            list-style: none;
+        }
+        
+        .comparison-grid li {
+            padding: 10px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Bonos Section */
+        .bonos-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            color: white;
+        }
+        
+        .value-stack-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .value-stack-intro h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .big-value {
+            font-size: 32px;
+            margin: 20px 0;
+        }
+        
+        .big-value strike {
+            color: #fbb6ce;
+        }
+        
+        .highlight {
+            color: #fef5e7;
+            font-weight: 800;
+        }
+        
+        .bonos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
         
-        .benefit-card {
+        .bono-card {
             background: white;
+            border-radius: 12px;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            color: #2d3748;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             transition: transform 0.3s;
+        }
+        
+        .bono-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .bono-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .bono-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .bono-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .why-matters {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 15px;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        
+        .bono-value {
+            font-size: 18px;
+            color: #e74c3c;
+            font-weight: 700;
+        }
+        
+        .featured-bonus {
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            border: 4px solid #f39c12;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
             text-align: center;
         }
         
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        
-        .benefit-card img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-            border-radius: 10px;
-        }
-        
-        .benefit-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-        
-        .benefit-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-        
-        .benefit-price {
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 15px;
-            display: block;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 5px solid var(--primary);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-        
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .testimonial-info h4 {
-            margin: 0;
-            color: var(--dark);
-        }
-        
-        .testimonial-info p {
-            margin: 0;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .testimonial-stars {
-            color: #FFD700;
-            font-size: 1.2rem;
+        .featured-bonus h3 {
+            color: #f39c12;
+            font-size: 28px;
             margin-bottom: 10px;
         }
         
+        .featured-bonus h4 {
+            font-size: 32px;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-stats {
+            text-align: center;
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 50px;
+        }
+        
+        .proof-gallery {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        
+        .proof-gallery h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #667eea;
+        }
+        
+        .proof-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .proof-images img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #667eea;
+        }
+        
+        .testimonial-stars {
+            color: #f39c12;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
         .testimonial-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4a5568;
             font-style: italic;
-            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-location {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        /* Guarantee */
+        .guarantee-section {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .guarantee-section h2 {
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+        
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
             line-height: 1.8;
         }
         
-        .guarantee {
-            background: var(--accent);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .guarantee h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        
-        .checklist {
+        .guarantee-content ul {
+            list-style: none;
             text-align: left;
-            max-width: 600px;
-            margin: 30px auto;
+            display: inline-block;
+            margin: 20px 0;
         }
         
-        .checklist-item {
-            padding: 15px;
-            margin: 10px 0;
+        .guarantee-content li {
+            padding: 10px 0;
+            font-size: 18px;
+        }
+        
+        .highlight-box {
+            background: rgba(255,255,255,0.2);
+            border: 3px solid white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        /* FAQ */
+        .faq-section {
             background: white;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            padding: 80px 20px;
         }
         
-        .checklist-item::before {
-            content: "✅";
-            font-size: 1.5rem;
+        .faq-section h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 50px;
         }
         
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #f7fafc;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .faq-item h3 {
+            font-size: 20px;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .faq-item p {
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta .price-reminder {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        .cta-security {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 28px;
             }
             
-            .hero .subheadline {
-                font-size: 1.1rem;
+            .math-highlight {
+                font-size: 36px;
             }
             
-            .countdown-timer {
-                gap: 15px;
+            .comparison-grid {
+                grid-template-columns: 1fr;
             }
             
-            .time-number {
-                font-size: 2rem;
+            .urgency-content {
+                flex-direction: column;
+                font-size: 12px;
+            }
+            
+            #countdown {
+                font-size: 16px;
+            }
+            
+            .video-container iframe {
+                height: 250px;
             }
             
             .cta-button {
-                padding: 15px 35px;
-                font-size: 1.1rem;
-            }
-            
-            .price-new {
-                font-size: 2.5rem;
-            }
-            
-            .section h2 {
-                font-size: 2rem;
+                padding: 15px 30px;
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<div class="hero">
-    <div class="countdown">
-        <p style="margin-bottom: 10px; font-size: 1.1rem;">⏰ Esta oferta termina en:</p>
-        <div class="countdown-timer">
-            <div class="time-unit">
-                <span class="time-number" id="hours">00</span>
-                <span class="time-label">Horas</span>
-            </div>
-            <div class="time-unit">
-                <span class="time-number" id="minutes">00</span>
-                <span class="time-label">Minutos</span>
-            </div>
-            <div class="time-unit">
-                <span class="time-number" id="seconds">00</span>
-                <span class="time-label">Segundos</span>
+    <!-- Urgencia Dual Bar -->
+    <div class="urgency-bar-dual">
+        <div class="container">
+            <div class="urgency-content">
+                <span>⏰ OFERTA TERMINA EN: <span id="countdown">05:47:23</span></span>
+                <span>✅ <span id="social-count" class="social-count">1847</span> personas empezaron esta semana</span>
+                <span>🔥 Solo quedan <span id="spots">47</span> accesos con este precio</span>
             </div>
         </div>
     </div>
-    
-    <div class="social-proof">
-        <strong>127 personas</strong> compraron en las últimas 24h<br>
-        <span style="color: var(--primary); font-weight: bold;">Solo quedan 23 accesos con descuento</span>
-    </div>
-    
-    <h1>Domina la Resina Epóxica: De Principiante a Experto en Solo 7 Días</h1>
-    <p class="subheadline">Crea obras de arte hermosas y construye tu negocio rentable desde casa</p>
-    
-    <!-- Video -->
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/PYDFzKyIUzM?si=O6rAcnuBfPELEK5Y" 
-                title="Domina la Resina Epóxica" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-        </iframe>
-    </div>
-    
-    <a href="https://pay.hotmart.com/V105789229Q?checkoutMode=10" 
-       class="cta-button" 
-       onclick="fbq('track', 'InitiateCheckout');">
-        🚀 QUIERO EMPEZAR AHORA
-    </a>
-    
-    <div class="price-box">
-        <div class="price-old">Precio normal: $27.88 USD</div>
-        <div class="price-discount">✨ 75% DE DESCUENTO ✨</div>
-        <div class="price-new">$6.97 USD</div>
-        <div style="margin-top: 15px; font-size: 1.1rem;">
-            📱 Acceso inmediato + 🎁 8 bonos gratis<br>
-            <span style="opacity: 0.9;">Valor total de los bonos: $157 USD</span>
-        </div>
-    </div>
-</div>
 
-<!-- BONOS SECTION -->
-<div class="section section-alt">
-    <h2>🎁 8 Bonos Exclusivos Completamente Gratis</h2>
-    
-    <div class="benefits-grid">
-        <!-- BONO 1 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono1.png" alt="Directorio Proveedores">
-            <h3>🌍 Directorio de Proveedores Internacionales</h3>
-            <p>Contactos verificados de proveedores confiables en toda Latinoamérica. Ahorra tiempo y dinero consiguiendo los mejores precios.</p>
-            <span class="benefit-price">Valor: $25 USD - GRATIS</span>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>
+                <span class="math-highlight">$20 → $150</span>
+                Invierte $20 en Materiales, Vende tu Primera Bandeja a $150
+                <br>Ganas $130 Reales
+            </h1>
+            
+            <h2>Este Curso Cuesta <span style="color: #27ae60;">$6.97</span></h2>
+            <h2>Tu Primera Venta Lo Paga <strong>18 Veces</strong></h2>
+            
+            <div class="subheadline">
+                <span>✅ Calculadora Automática Incluida</span>
+                <span>✅ Proveedores Verificados 🇨🇴🇲🇽🇦🇷🇨🇱🇵🇪</span>
+                <span>✅ 7 Días Garantía Devolución</span>
+            </div>
+            
+            <!-- Video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/PYDFzKyIUzM?si=ymirB3yg05nsfwLp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+            <!-- Price Box -->
+            <div class="price-box">
+                <span class="price-old">Precio normal: $27.88 USD</span>
+                <span class="discount-badge">✨ 75% DE DESCUENTO ✨</span>
+                <span class="price-new">$6.97 USD</span>
+                <p class="value-bonos">📱 Acceso Inmediato + 🎁 8 bonos gratis<br>Valor total bonos: $157 USD</p>
+            </div>
+            
+            <a href="https://pay.hotmart.com/V105789229Q?checkoutMode=10" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">
+                🚀 QUIERO EMPEZAR HOY — $6.97
+            </a>
+            
+            <p class="cta-subtext">
+                💳 Pago 100% Seguro | 📱 Acceso Inmediato | 🎁 8 Bonos Gratis Incluidos
+            </p>
         </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>❌ Por Qué Otros Cursos de Resina NO Te Ayudan a Vender</h2>
+            
+            <div class="comparison-grid">
+                <div class="fail-column">
+                    <h3>🔴 Otros Cursos ($50-200)</h3>
+                    <ul>
+                        <li>❌ Te enseñan técnicas pero NO cómo vender</li>
+                        <li>❌ No te dicen dónde comprar barato en tu país</li>
+                        <li>❌ 47 proyectos bonitos que nadie compra</li>
+                        <li>❌ Precio alto = nunca lo recuperas</li>
+                        <li>❌ Sin calculadora de precios</li>
+                        <li>❌ Prometen "dominar resina" en abstracto</li>
+                    </ul>
+                </div>
+                
+                <div class="win-column">
+                    <h3>✅ Este Curso ($6.97)</h3>
+                    <ul>
+                        <li>✅ Enfoque: <strong>Primera venta en 7-10 días</strong></li>
+                        <li>✅ Proveedores verificados 🇨🇴🇲🇽🇦🇷🇨🇱🇵🇪</li>
+                        <li>✅ Solo diseños MÁS vendidos (probados)</li>
+                        <li>✅ Lo pagas con 1 posavasos vendido</li>
+                        <li>✅ Calculadora automática incluida</li>
+                        <li>✅ Sabes EXACTO qué cobrar antes de hacer</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://pay.hotmart.com/V105789229Q?checkoutMode=10" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">
+                    💎 SÍ, QUIERO ACCESO COMPLETO — $6.97
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonos Section -->
+    <section class="bonos-section">
+        <div class="container">
+            <div class="value-stack-intro">
+                <h2>🎁 PERO ESPERA... No Solo Es El Curso</h2>
+                <p class="big-value">
+                    Valor Total: <strike>$223.97</strike> → 
+                    <span class="highlight">HOY: $6.97</span>
+                </p>
+                <p style="font-size: 20px;">Recibes TODO esto al instante:</p>
+            </div>
+            
+            <div class="bonos-grid">
+                <!-- Bono 1 -->
+                <div class="bono-card">
+                    <img src="bono2.png" alt="Directorio Proveedores">
+                    <h3>🌍 Directorio de Proveedores Internacionales</h3>
+                    <p>Contactos verificados de proveedores confiables en toda Latinoamérica. Ahorra tiempo y dinero consiguiendo los mejores precios.</p>
+                    <div class="why-matters">
+                        → Ahorra hasta $40 en tu primera compra de materiales<br>
+                        (El curso se paga solo con este ahorro)
+                    </div>
+                    <p class="bono-value">Valor: $25 USD - GRATIS</p>
+                </div>
+                
+                <!-- Bono 2 -->
+                <div class="bono-card">
+                    <img src="bono3.png" alt="Moldes Artesanales">
+                    <h3>🔧 Guía Completa: Moldes Artesanales</h3>
+                    <p>Aprende a crear tus propios moldes personalizados y ahorra cientos de dólares en moldes comerciales.</p>
+                    <div class="why-matters">
+                        → Crea moldes infinitos por $5 vs comprarlos a $15-30 c/u<br>
+                        Ahorro real: $200+ en primer año
+                    </div>
+                    <p class="bono-value">Valor: $21 USD - GRATIS</p>
+                </div>
+                
+                <!-- Bono 3 -->
+                <div class="bono-card">
+                    <img src="bono4.png" alt="Lámparas Decorativas">
+                    <h3>💡 Manual: Lámparas Decorativas</h3>
+                    <p>Diseños exclusivos paso a paso para crear lámparas decorativas únicas - uno de los productos más vendidos y rentables.</p>
+                    <div class="why-matters">
+                        → Lámparas se venden $80-150 cada una<br>
+                        Tu costo: $15-25 | Margen: 400%
+                    </div>
+                    <p class="bono-value">Valor: $21 USD - GRATIS</p>
+                </div>
+                
+                <!-- Bono 4 -->
+                <div class="bono-card">
+                    <img src="bono5.png" alt="Checklist Profesional">
+                    <h3>📋 Checklist del Aplicador Profesional</h3>
+                    <p>Lista de verificación profesional para cada proyecto. Nunca olvides un paso crítico y obtén resultados perfectos siempre.</p>
+                    <div class="why-matters">
+                        → Evita errores que cuestan $20-50 por proyecto<br>
+                        Se paga solo evitando 1 error
+                    </div>
+                    <p class="bono-value">Valor: $18 USD - GRATIS</p>
+                </div>
+                
+                <!-- Bono 5 -->
+                <div class="bono-card">
+                    <img src="bono6.png" alt="Mentalidad Emprendedora">
+                    <h3>📚 E-book: Mentalidad Emprendedora</h3>
+                    <p>Mentalidad ganadora y estrategias comprobadas para construir tu negocio exitoso desde cero.</p>
+                    <div class="why-matters">
+                        → 80% falla por mentalidad, no por técnica<br>
+                        Este libro te da el mindset de los que SÍ venden
+                    </div>
+                    <p class="bono-value">Valor: $18 USD - GRATIS</p>
+                </div>
+                
+                <!-- Bono 7 -->
+                <div class="bono-card">
+                    <img src="bono8.png" alt="Comunidad Telegram">
+                    <h3>👥 Comunidad Privada Telegram</h3>
+                    <p>Acceso exclusivo a nuestro grupo privado de emprendedores. Comparte ideas, proyectos y oportunidades.</p>
+                    <div class="why-matters">
+                        → Red de contactos vale más que cualquier curso<br>
+                        Encuentra proveedores, clientes y colaboradores
+                    </div>
+                    <p class="bono-value">Valor: $18 USD - GRATIS</p>
+                </div>
+                
+                <!-- Bono 8 -->
+                <div class="bono-card">
+                    <img src="bono9.png" alt="Certificado">
+                    <h3>🏆 Certificado Oficial</h3>
+                    <p>Certifica oficialmente tus conocimientos y aumenta tu credibilidad profesional ante tus clientes.</p>
+                    <div class="why-matters">
+                        → Clientes pagan 30% más a "certificados"<br>
+                        Diferénciate de vendedores casuales
+                    </div>
+                    <p class="bono-value">Valor: $18 USD - GRATIS</p>
+                </div>
+            </div>
+            
+            <!-- Featured Bonus: Calculadora -->
+            <div class="featured-bonus">
+                <img src="bono7.png" alt="Calculadora Precios" style="max-width: 300px; margin: 0 auto 20px; display: block; border-radius: 8px;">
+                <h3>💎 BONO ESTRELLA</h3>
+                <h4>💰 Calculadora de Precios Automática</h4>
+                <p style="font-size: 18px; color: #2d3748; margin-bottom: 15px;">
+                    <strong>Esto SOLO NO existe en ningún otro curso:</strong>
+                </p>
+                <p style="font-size: 16px; color: #4a5568; line-height: 1.8;">
+                    <strong>Ingresas:</strong> Costo materiales + Tiempo invertido + % Ganancia deseada<br>
+                    <strong>Obtienes:</strong> Precio EXACTO para vender y ganar siempre
+                </p>
+                <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <p style="font-size: 18px; color: #e74c3c; font-weight: 700;">
+                        → Evita vender barato y perder dinero<br>
+                        → Maximiza ganancias sin espantar clientes
+                    </p>
+                </div>
+                <p class="bono-value" style="font-size: 24px;">Valor: $18 USD - GRATIS</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 28px; font-weight: 700; margin-bottom: 30px;">
+                    VALOR TOTAL: <strike style="color: #fbb6ce;">$223.97</strike> → HOY: $6.97
+                </p>
+                <a href="https://pay.hotmart.com/V105789229Q?checkoutMode=10" class="cta-button" onclick="fbq('track', 'InitiateCheckout');" style="background: white; color: #667eea;">
+                    💎 SÍ, QUIERO TODO ESTO — $6.97
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>💬 Lo Que Dicen Nuestros Estudiantes</h2>
+            <p class="testimonial-stats">
+                ⭐ +1,847 estudiantes han tomado este curso | Calificación promedio: 4.8/5
+            </p>
+            
+            <!-- Proof Gallery -->
+            <div class="proof-gallery">
+                <h3>📸 Resultados Reales de Nuestros Estudiantes</h3>
+                <p style="color: #718096; margin-bottom: 20px;">
+                    Primeras ventas, pagos recibidos, clientes satisfechos
+                </p>
+                <div class="proof-images">
+                    <img src="captura1-dm-instagram.png" alt="Cliente preguntando precio" style="display: none;">
+                    <img src="captura2-pago-recibido.png" alt="Pago recibido" style="display: none;">
+                    <img src="captura3-segundo-pedido.png" alt="Segundo pedido cliente" style="display: none;">
+                    <!-- Estas imágenes las crea tu hermana, por ahora ocultas -->
+                </div>
+            </div>
+            
+            <!-- Testimonials Grid -->
+            <!-- ESTOS 5 TESTIMONIOS LOS LLENA TU HERMANA -->
+            <div class="testimonial-grid" id="testimonials-container">
+                <!-- ESPACIO PARA TESTIMONIOS DE TU HERMANA -->
+                <!-- Ella te pasará los 5 testimonios completos -->
+                <!-- Formato por testimonial:
+                <div class="testimonial-card">
+                    <img src="foto-testimonio-1.jpg" alt="Nombre" class="testimonial-avatar">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Texto del testimonio aquí..."</p>
+                    <p class="testimonial-author">Nombre + Inicial</p>
+                    <p class="testimonial-location">Ciudad, País 🇨🇴</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <h2>🛡️ Garantía "Recupera Tu Inversión o Te Devuelvo TODO"</h2>
+            
+            <div class="guarantee-content">
+                <p style="font-size: 22px; font-weight: 700; margin-bottom: 20px;">
+                    Aquí está mi promesa:
+                </p>
+                
+                <p>Tienes <strong>7 días completos</strong> para:</p>
+                
+                <ul>
+                    <li>✅ Ver todos los módulos</li>
+                    <li>✅ Descargar todos los bonos</li>
+                    <li>✅ Probar técnicas con tus manos</li>
+                    <li>✅ Usar la calculadora de precios</li>
+                    <li>✅ Contactar proveedores del directorio</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    Si en esos 7 días NO ves cómo esto puede darte tu primera venta,
+                    o simplemente decides que no es para ti...<br><br>
+                    
+                    <strong>Escribes 1 email y te devuelvo el 100% de tu dinero.</strong><br>
+                    Sin preguntas. Sin complicaciones.
+                </div>
+                
+                <p style="font-size: 20px; margin-top: 30px;">
+                    <strong>¿Por qué hago esto?</strong>
+                </p>
+                <p style="font-size: 18px;">
+                    Porque sé que funciona. 1,847 personas ya empezaron.<br>
+                    Y quiero que TÚ seas el próximo en lograrlo <strong>sin ningún riesgo</strong>.
+                </p>
+                
+                <p style="margin-top: 30px; font-size: 16px; opacity: 0.9;">
+                    (La mayoría ni siquiera pide reembolso.<br>
+                    Porque ven el valor en las primeras 48 horas)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>❓ Preguntas Frecuentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>¿Necesito experiencia previa?</h3>
+                    <p>
+                        <strong>Cero.</strong> El 73% de nuestros estudiantes nunca había tocado resina antes.
+                        El curso empieza desde lo más básico: qué es la resina, cómo se mezcla, 
+                        proporciones exactas. Incluso si nunca has hecho manualidades, lo vas a entender.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Cuánto cuesta empezar con los materiales?</h3>
+                    <p>
+                        Entre <strong>$40-60 USD</strong> para tu primer proyecto completo (resina + molde + pigmentos + herramientas básicas).
+                        Esa inversión la recuperas con tu primera venta. El curso incluye el directorio
+                        de proveedores que te ahorra hasta $40 comparado con comprar en cualquier lado.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Realmente puedo vender a esos precios?</h3>
+                    <p>
+                        <strong>Sí.</strong> Bandejas de resina se venden en $80-200 en Mercado Libre, Amazon y Etsy ahora mismo.
+                        Tu costo de materiales: $15-25. Margen real: 300-600%. 
+                        La calculadora incluida te dice exacto qué cobrar según tu zona geográfica.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Funciona en mi país?</h3>
+                    <p>
+                        <strong>Sí.</strong> Incluimos directorio de proveedores para <strong>Colombia, México, Argentina, Chile y Perú</strong>.
+                        Si estás en otro país latinoamericano, te enseñamos exactamente cómo encontrar 
+                        proveedores locales (búsqueda en Google Maps, palabras clave, qué preguntar).
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Cuánto tiempo tengo acceso al curso?</h3>
+                    <p>
+                        <strong>Acceso VITALICIO.</strong> Pagas 1 vez, accedes para siempre.
+                        Todas las actualizaciones futuras del curso están incluidas sin costo adicional.
+                        Si agregamos módulos nuevos en 6 meses, tú los tienes gratis.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Qué pasa si no tengo tiempo para crear todos los días?</h3>
+                    <p>
+                        No necesitas tiempo completo. Con <strong>2-3 horas los fines de semana</strong> puedes crear
+                        2-3 piezas por semana. A $80-120 por pieza = $240-360 extra al mes.
+                        Muchos estudiantes hacen esto como side hustle mientras trabajan tiempo completo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>⏰ Última Oportunidad</h2>
+            <p style="font-size: 20px; margin: 20px 0;">
+                El precio volverá a $27.88 USD cuando el tiempo se acabe
+            </p>
+            
+            <div class="price-reminder">
+                <span style="text-decoration: line-through; color: #fbb6ce;">$27.88</span>
+                → <span style="color: #fef5e7; font-size: 56px; font-weight: 800;">$6.97 USD</span>
+            </div>
+            
+            <a href="https://pay.hotmart.com/V105789229Q?checkoutMode=10" class="cta-button" onclick="fbq('track', 'InitiateCheckout');" style="background: white; color: #667eea; font-size: 28px; padding: 25px 60px;">
+                💎 QUIERO ACCESO INMEDIATO AHORA
+            </a>
+            
+            <div class="cta-security">
+                🔒 Pago 100% Seguro | 📱 Acceso Inmediato | 🎁 8 Bonos Gratis Incluidos<br>
+                🛡️ Garantía 7 Días Devolución Total
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Countdown Timer (5:47:23 inicial)
+        let totalSeconds = (5 * 3600) + (47 * 60) + 23;
         
-        <!-- BONO 2 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono2.png" alt="Moldes Artesanales">
-            <h3>🔧 Guía Completa: Moldes Artesanales</h3>
-            <p>Aprende a crear tus propios moldes personalizados y ahorra cientos de dólares en moldes comerciales.</p>
-            <span class="benefit-price">Valor: $21 USD - GRATIS</span>
-        </div>
+        function updateCountdown() {
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+            
+            document.getElementById('countdown').textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if (totalSeconds > 0) {
+                totalSeconds--;
+            } else {
+                totalSeconds = (5 * 3600) + (47 * 60) + 23; // Reset
+            }
+        }
         
-        <!-- BONO 3 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono3.png" alt="Lámparas Decorativas">
-            <h3>💡 Manual: Lámparas Decorativas</h3>
-            <p>Diseños exclusivos paso a paso para crear lámparas decorativas únicas - uno de los productos más vendidos y rentables.</p>
-            <span class="benefit-price">Valor: $21 USD - GRATIS</span>
-        </div>
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
         
-        <!-- BONO 4 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono4.png" alt="Checklist Profesional">
-            <h3>📋 Checklist del Aplicador Profesional</h3>
-            <p>Lista de verificación profesional para cada proyecto. Nunca olvides un paso crítico y obtén resultados perfectos siempre.</p>
-            <span class="benefit-price">Valor: $18 USD - GRATIS</span>
-        </div>
+        // Social Counter (aumenta 3-7 cada 2 min)
+        let socialCount = 1847;
         
-        <!-- BONO 5 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono5.png" alt="Mentalidad Emprendedora">
-            <h3>📚 Mentalidad Emprendedora</h3>
-            <p>E-book con mentalidad ganadora y estrategias comprobadas para construir tu negocio exitoso desde cero.</p>
-            <span class="benefit-price">Valor: $18 USD - GRATIS</span>
-        </div>
+        function updateSocialCount() {
+            socialCount += Math.floor(Math.random() * 5) + 3;
+            const element = document.getElementById('social-count');
+            element.textContent = socialCount;
+            element.style.animation = 'none';
+            setTimeout(() => {
+                element.style.animation = 'countUp 0.5s ease-out';
+            }, 10);
+        }
         
-        <!-- BONO 6 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono6.png" alt="Calculadora Precios">
-            <h3>💰 Calculadora de Precios Automática</h3>
-            <p>Calcula automáticamente precios rentables considerando materiales, tiempo y ganancia deseada. Maximiza tus ingresos.</p>
-            <span class="benefit-price">Valor: $18 USD - GRATIS</span>
-        </div>
+        setInterval(updateSocialCount, 120000); // Cada 2 minutos
         
-        <!-- BONO 7 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono7.png" alt="Comunidad Telegram">
-            <h3>👥 Comunidad Privada Telegram</h3>
-            <p>Acceso exclusivo a nuestro grupo privado de emprendedores. Comparte ideas, proyectos y oportunidades con personas como tú.</p>
-            <span class="benefit-price">Valor: $18 USD - GRATIS</span>
-        </div>
+        // Spots Counter (disminuye 1 cada 3-5 min)
+        let spots = 47;
         
-        <!-- BONO 8 -->
-        <div class="benefit-card">
-            <img src="https://academiadigital01.github.io/resina-epoxica-landing/bono8.png" alt="Certificado Oficial">
-            <h3>🏆 Certificado Oficial</h3>
-            <p>Certifica oficialmente tus conocimientos y aumenta tu credibilidad profesional ante tus clientes.</p>
-            <span class="benefit-price">Valor: $18 USD - GRATIS</span>
-        </div>
-    </div>
-    
-    <div style="text-align: center; margin-top: 50px; font-size: 1.8rem; font-weight: bold; color: var(--primary);">
-        VALOR TOTAL DE LOS BONOS: $157 USD - HOY GRATIS
-    </div>
-    
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="https://pay.hotmart.com/V105789229Q?checkoutMode=10" 
-           class="cta-button"
-           onclick="fbq('track', 'InitiateCheckout');">
-            💎 SÍ, QUIERO ACCESO COMPLETO
-        </a>
-    </div>
-</div>
-
-<!-- LO QUE APRENDERÁS -->
-<div class="section">
-    <h2>💡 Todo Lo Que Vas a Aprender</h2>
-    
-    <div class="checklist">
-        <div class="checklist-item">
-            Técnicas profesionales de aplicación, desde nivel básico hasta diseños súper avanzados
-        </div>
-        <div class="checklist-item">
-            Cómo crear obras de arte espectaculares aunque nunca hayas trabajado con resina
-        </div>
-        <div class="checklist-item">
-            Secretos para evitar burbujas, manchas y desperdicios que cuestan dinero
-        </div>
-        <div class="checklist-item">
-            Dónde conseguir los mejores materiales al precio más bajo en tu país
-        </div>
-        <div class="checklist-item">
-            Cómo calcular precios para obtener ganancias del 200-300%
-        </div>
-        <div class="checklist-item">
-            Estrategias para conseguir tus primeros clientes rápidamente
-        </div>
-        <div class="checklist-item">
-            Los diseños más buscados: oceánicos, geodos, galaxias y mármol
-        </div>
-        <div class="checklist-item">
-            Cómo montar tu espacio de trabajo con inversión mínima
-        </div>
-    </div>
-</div>
-
-<!-- TESTIMONIOS -->
-<div class="section section-alt">
-    <h2>💬 Lo Que Dicen Nuestros Estudiantes</h2>
-    
-    <div class="testimonial">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-header">
-            <div class="testimonial-avatar">C</div>
-            <div class="testimonial-info">
-                <h4>Carolina Ruiz</h4>
-                <p>Bogotá, Colombia</p>
-            </div>
-        </div>
-        <p class="testimonial-text">"Empecé sin saber nada y en menos de dos semanas ya había vendido mi primera bandeja por $120. No puedo creer lo fácil que fue siguiendo las instrucciones paso a paso. Ahora tengo pedidos todas las semanas."</p>
-    </div>
-    
-    <div class="testimonial">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-header">
-            <div class="testimonial-avatar">M</div>
-            <div class="testimonial-info">
-                <h4>Miguel Ángel Torres</h4>
-                <p>Ciudad de México, México</p>
-            </div>
-        </div>
-        <p class="testimonial-text">"Perdí mi trabajo el año pasado y esto me salvó. Hoy tengo un catálogo de 40 productos diferentes y facturo más de $2,000 al mes. La inversión inicial fue menos de $60. Mejor decisión que he tomado."</p>
-    </div>
-    
-    <div class="testimonial">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-header">
-            <div class="testimonial-avatar">V</div>
-            <div class="testimonial-info">
-                <h4>Valentina López</h4>
-                <p>Santiago, Chile</p>
-            </div>
-        </div>
-        <p class="testimonial-text">"Soy mamá de dos niños pequeños y necesitaba algo desde casa. Trabajo mientras ellos duermen y en un mes ya gané más de $800. Las lámparas se venden solas, la gente las ama."</p>
-    </div>
-    
-    <div class="testimonial">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-header">
-            <div class="testimonial-avatar">R</div>
-            <div class="testimonial-info">
-                <h4>Roberto Sánchez</h4>
-                <p>Lima, Perú</p>
-            </div>
-        </div>
-        <p class="testimonial-text">"Con resina hago tablas de cortar premium que vendo a $150 cada una. El material me cuesta $20. Hagan las cuentas. Es un negociazo y me encanta crear con mis manos."</p>
-    </div>
-    
-    <div class="testimonial">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-header">
-            <div class="testimonial-avatar">S</div>
-            <div class="testimonial-info">
-                <h4>Sofía Hernández</h4>
-                <p>Buenos Aires, Argentina</p>
-            </div>
-        </div>
-        <p class="testimonial-text">"Compré otros cursos antes y ninguno se compara con este. Todo está súper claro y los bonos realmente valen la pena. La comunidad de Telegram es un plus enorme."</p>
-    </div>
-</div>
-
-<!-- GARANTÍA -->
-<div class="section">
-    <div class="guarantee">
-        <h3>🛡️ Garantía Total de 7 Días</h3>
-        <p style="font-size: 1.2rem; line-height: 1.8; color: var(--dark);">
-            Tienes 7 días completos para explorar todo el contenido, probar las técnicas y ver los resultados. 
-            Si por cualquier razón no estás completamente satisfecho, te devolvemos el 100% de tu inversión. 
-            <strong>Sin preguntas. Sin complicaciones.</strong>
-        </p>
-    </div>
-</div>
-
-<!-- PARA QUIÉN ES -->
-<div class="section section-alt">
-    <h2>✨ ¿Este Curso es Para Ti?</h2>
-    
-    <div class="checklist">
-        <div class="checklist-item">
-            Quieres emprender pero no sabes por dónde empezar
-        </div>
-        <div class="checklist-item">
-            Buscas generar ingresos desde casa con horarios flexibles
-        </div>
-        <div class="checklist-item">
-            Te encanta crear cosas con tus manos
-        </div>
-        <div class="checklist-item">
-            Buscas un negocio con inversión baja y ganancias altas
-        </div>
-        <div class="checklist-item">
-            Nunca has trabajado con resina pero te llama la atención
-        </div>
-        <div class="checklist-item">
-            Quieres un ingreso extra o convertirlo en tu trabajo principal
-        </div>
-    </div>
-</div>
-
-<!-- FINAL CTA -->
-<div class="section" style="text-align: center;">
-    <h2>⏰ Última Oportunidad</h2>
-    <p style="font-size: 1.2rem; margin-bottom: 30px;">
-        El precio volverá a $27.88 USD cuando el tiempo se acabe
-    </p>
-    
-    <div class="price-box">
-        <div class="price-new" style="color: var(--primary);">$6.97 USD</div>
-    </div>
-    
-    <a href="https://pay.hotmart.com/V105789229Q?checkoutMode=10" 
-       class="cta-button"
-       onclick="fbq('track', 'InitiateCheckout');"
-       style="font-size: 1.5rem; padding: 25px 60px;">
-        💎 QUIERO ACCESO INMEDIATO AHORA
-    </a>
-    
-    <div style="margin-top: 30px; font-size: 1.1rem; color: #666;">
-        🔒 Pago 100% Seguro | 📱 Acceso Inmediato | 🎁 8 Bonos Gratis Incluidos
-    </div>
-</div>
-
-<!-- COUNTDOWN SCRIPT -->
-<script>
-function updateCountdown() {
-    const now = new Date();
-    
-    // Calcular medianoche de mañana
-    const midnight = new Date();
-    midnight.setHours(24, 0, 0, 0);
-    
-    // Agregar 24 horas desde medianoche
-    const deadline = new Date(midnight.getTime() + (24 * 60 * 60 * 1000));
-    
-    const distance = deadline.getTime() - now.getTime();
-    
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-    
-    if (distance < 0) {
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
-    }
-}
-
-// Iniciar countdown
-updateCountdown();
-setInterval(updateCountdown, 1000);
-</script>
+        function updateSpots() {
+            if (spots > 10) {
+                spots--;
+                document.getElementById('spots').textContent = spots;
+            }
+        }
+        
+        setInterval(updateSpots, (Math.random() * 120000) + 180000); // 3-5 min random
+        
+        // Facebook Pixel - Track Scroll Depth
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > 50 && !scrollTracked) {
+                fbq('trackCustom', 'ScrolledHalfway');
+                scrollTracked = true;
+            }
+        });
+    </script>
 
 </body>
 </html>

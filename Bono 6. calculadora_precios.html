@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precios - Resina</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 32px;
+            color: #667eea;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+        .input-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #334155;
+            font-size: 15px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .help-text {
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 5px;
+        }
+        .calculate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: transform 0.2s;
+        }
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+        }
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+        .results {
+            display: none;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid #e2e8f0;
+        }
+        .results.show {
+            display: block;
+        }
+        .result-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 5px solid #667eea;
+        }
+        .result-card h3 {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .result-card .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #667eea;
+        }
+        .result-card .description {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+        .warning-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .warning-box h4 {
+            color: #d97706;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .warning-box p {
+            color: #92400e;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .profit-card {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left-color: #10b981;
+        }
+        .profit-card .price {
+            color: #10b981;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧮 Calculadora de Precios</h1>
+        <p class="subtitle">Calcula el precio correcto de tus productos de resina</p>
+        
+        <div class="input-group">
+            <label for="materiales">💰 Costo de Materiales (USD)</label>
+            <input type="number" id="materiales" min="0" step="0.5" placeholder="Ej: 22">
+            <p class="help-text">Resina + pigmentos + molde + otros</p>
+        </div>
+        
+        <div class="input-group">
+            <label for="tiempo">⏱️ Tiempo de Trabajo (horas)</label>
+            <input type="number" id="tiempo" min="0" step="0.5" placeholder="Ej: 2">
+            <p class="help-text">Solo tiempo activo trabajando (no curado)</p>
+        </div>
+        
+        <div class="input-group">
+            <label for="pago-hora">💵 Tu Pago por Hora Deseado (USD)</label>
+            <input type="number" id="pago-hora" min="0" step="5" placeholder="Ej: 20" value="20">
+            <p class="help-text">¿Cuánto quieres ganar por hora? (Default: $20/hora)</p>
+        </div>
+        
+        <button class="calculate-btn" onclick="calcular()">✨ Calcular Precios</button>
+        
+        <div class="results" id="results">
+            <div class="result-card">
+                <h3>Precio Mínimo (Recuperar Costos)</h3>
+                <div class="price" id="precio-minimo">$0</div>
+                <p class="description">Solo recuperas materiales + tiempo mínimo</p>
+            </div>
+            
+            <div class="result-card">
+                <h3>Precio Recomendado</h3>
+                <div class="price" id="precio-recomendado">$0</div>
+                <p class="description">Equilibrio entre competitivo y rentable</p>
+            </div>
+            
+            <div class="result-card">
+                <h3>Precio Premium</h3>
+                <div class="price" id="precio-premium">$0</div>
+                <p class="description">Para piezas complejas o personalizadas</p>
+            </div>
+            
+            <div class="result-card profit-card">
+                <h3>Tu Ganancia (Precio Recomendado)</h3>
+                <div class="price" id="ganancia">$0</div>
+                <p class="description">Profit después de materiales + tu tiempo</p>
+            </div>
+            
+            <div class="warning-box">
+                <h4>💡 Recomendaciones:</h4>
+                <p id="recomendacion"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function calcular() {
+            const materiales = parseFloat(document.getElementById('materiales').value) || 0;
+            const tiempo = parseFloat(document.getElementById('tiempo').value) || 0;
+            const pagoHora = parseFloat(document.getElementById('pago-hora').value) || 20;
+            
+            if (materiales === 0 || tiempo === 0) {
+                alert('⚠️ Por favor completa costo de materiales y tiempo de trabajo');
+                return;
+            }
+            
+            // Fórmulas
+            const costoTiempo = tiempo * pagoHora;
+            const costoTotal = materiales + costoTiempo;
+            
+            const precioMinimo = materiales * 4; // 4x materiales
+            const precioRecomendado = costoTotal * 1.5; // Costo total + 50%
+            const precioPremium = costoTotal * 2; // Costo total × 2
+            
+            const ganancia = precioRecomendado - costoTotal;
+            
+            // Mostrar resultados
+            document.getElementById('precio-minimo').textContent = '$' + precioMinimo.toFixed(2);
+            document.getElementById('precio-recomendado').textContent = '$' + precioRecomendado.toFixed(2);
+            document.getElementById('precio-premium').textContent = '$' + precioPremium.toFixed(2);
+            document.getElementById('ganancia').textContent = '$' + ganancia.toFixed(2);
+            
+            // Recomendación personalizada
+            let recomendacion = '';
+            if (tiempo < 1) {
+                recomendacion = '⚡ Proyecto rápido: Usa precio mínimo-recomendado. Ideal para volumen alto.';
+            } else if (tiempo >= 1 && tiempo < 3) {
+                recomendacion = '✅ Complejidad media: Precio recomendado es perfecto.';
+            } else {
+                recomendacion = '💎 Proyecto complejo: Justifica precio premium. Destaca el trabajo manual.';
+            }
+            
+            if (materiales > 40) {
+                recomendacion += ' Materiales costosos: Asegúrate de comunicar calidad premium al cliente.';
+            }
+            
+            document.getElementById('recomendacion').textContent = recomendacion;
+            
+            // Mostrar sección resultados
+            document.getElementById('results').classList.add('show');
+            
+            // Scroll suave a resultados
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Calcular automático cuando cambien valores
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', () => {
+                if (document.getElementById('results').classList.contains('show')) {
+                    calcular();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

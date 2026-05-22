@@ -130,40 +130,6 @@
             margin-bottom: 10px;
         }
         
-        .cta-button {
-            display: block;
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
-            color: white;
-            padding: 25px 50px;
-            font-size: 26px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
-            transition: all 0.3s;
-            margin: 30px auto;
-            text-align: center;
-            max-width: 550px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(39, 174, 96, 0.6);
-        }
-        
-        .btn-no-final {
-            display: block;
-            text-align: center;
-            color: #718096;
-            text-decoration: none;
-            margin: 25px auto;
-            font-size: 16px;
-        }
-        
-        .btn-no-final:hover {
-            color: #2d3748;
-        }
-        
         @media (max-width: 768px) {
             h1 {
                 font-size: 28px;
@@ -171,11 +137,6 @@
             
             .combo-offer {
                 padding: 30px 20px;
-            }
-            
-            .cta-button {
-                padding: 20px 35px;
-                font-size: 22px;
             }
         }
     </style>
@@ -222,15 +183,19 @@
                 Esta es genuinamente tu última oportunidad.<br>
                 Si cierras esta página, el combo desaparece para siempre.
             </p>
-            
-            <a href="https://pay.hotmart.com/V105808588J" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 47, currency: 'USD'});">
-                SÍ, QUIERO EL COMBO — $47
-            </a>
-            
-            <a href="https://academiadigital01.github.io/resina-epoxica-landing/thankyou-final.html" class="btn-no-final">
-                No, solo quiero el curso base
-            </a>
         </div>
     </div>
+
+    <!-- HOTMART - Sales Funnel Widget -->
+    <!-- sales funnel container -->
+    <div id="hotmart-sales-funnel"></div>
+
+    <!-- script load and setup -->
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+    <script>
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+    </script>
+    <!-- HOTMART - Sales Funnel Widget -->
+    
 </body>
 </html>

@@ -154,40 +154,6 @@
             display: block;
         }
         
-        .cta-button {
-            display: block;
-            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
-            color: white;
-            padding: 25px 50px;
-            font-size: 24px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(72, 187, 120, 0.4);
-            transition: all 0.3s;
-            margin: 30px auto;
-            text-align: center;
-            max-width: 600px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(72, 187, 120, 0.6);
-        }
-        
-        .btn-no {
-            display: block;
-            text-align: center;
-            color: #718096;
-            text-decoration: none;
-            margin: 20px auto;
-            font-size: 16px;
-        }
-        
-        .btn-no:hover {
-            color: #2d3748;
-        }
-        
         @media (max-width: 768px) {
             h1 {
                 font-size: 28px;
@@ -199,11 +165,6 @@
             
             .offer-box {
                 padding: 25px 20px;
-            }
-            
-            .cta-button {
-                padding: 20px 30px;
-                font-size: 20px;
             }
         }
     </style>
@@ -261,14 +222,6 @@
                 Solo disponible en esta página.<br>
                 Si sales, no vuelves a ver este precio.
             </p>
-            
-            <a href="https://pay.hotmart.com/M105808204A" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 27, currency: 'USD'});">
-                SÍ, QUIERO EL SISTEMA COMPLETO — $27
-            </a>
-            
-            <a href="https://pay.hotmart.com/H105808531B" class="btn-no">
-                No gracias, solo quiero el curso →
-            </a>
         </div>
     </div>
     
@@ -290,5 +243,17 @@
         setInterval(actualizarCountdown, 1000);
         actualizarCountdown();
     </script>
+
+    <!-- HOTMART - Sales Funnel Widget -->
+    <!-- sales funnel container -->
+    <div id="hotmart-sales-funnel"></div>
+
+    <!-- script load and setup -->
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+    <script>
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+    </script>
+    <!-- HOTMART - Sales Funnel Widget -->
+    
 </body>
 </html>
